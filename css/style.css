@@ -1,0 +1,373 @@
+:root {
+  --fuente1: "Pt Sans", sans-serif;
+  --fuenteParrafo: "Open Sans", sans-serif;
+  --Primario: #784d3c;
+  --Gris: #e1e1e1;
+  --Blanco: #ffffff;
+  --Negro: #000000;
+  --Amarillo:#E5C167;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Es para que en el proyecto 1rem=10px*/
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--fuenteParrafo);
+  font-size: 1.6rem;
+  line-height: 2;
+  background-color: var(--Negro);
+}
+
+/* GLOBALES */
+
+.contenedor {
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+p{
+  color: var(--Blanco);
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente1);
+  line-height: 1.2;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+  color: var(--Blanco);
+}
+h3 {
+  font-size: 3.2rem;
+  color: var(--Blanco);
+}
+h4 {
+  font-size: 2rem;
+  color: var(--Blanco);
+}
+img{
+  width: 100%;
+}
+/* UTILIDADES */
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.centrar-texto {
+  text-align: center;
+}
+.transiciones{
+  transition: transform 0.3s ease-in-out;
+}
+.border{
+  border-bottom: 0.2rem solid var(--Gris);
+}
+
+/* BARRA DE INICIO */
+
+@media (max-width: 768px) {
+  .navegacion {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+  }
+  .center-section {
+    flex-direction: column;
+    gap: 4rem !important;
+  }
+
+  .navegacion__enlace {
+    margin: 10px 0; /* Ajusta el espacio entre elementos en la columna */
+  }
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  justify-content: space-between; /* Coloca los elementos al extremo */
+}
+.navegacion__enlace {
+  text-decoration: none;
+  color: var(--Blanco); /* Ajusta el color según tus preferencias */
+  margin: 0 15px; /* Agrega espacio entre los elementos de navegación */
+}
+.center-section {
+  display: flex;
+  gap: 16rem;
+  align-items: center;
+}
+.imagen--logo {
+  height: 7rem;
+}
+svg {
+  fill: var(--Blanco);
+}
+.icono {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.mid-section--h2 {
+  font-family: var(--fuente1);
+  font-weight: 500;
+  color: var(--Blanco);
+}
+.mid-section--img{
+  height: 30rem;
+  object-fit:cover;
+  width: 100%;
+}
+.mid-section {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+.mid-section--img-div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid-section--h2-div {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  text-align: right;
+}
+@media(min-width:480px){
+  .mid-section--h2 {
+    font-size: 2rem;
+  }
+  }
+@media(min-width:768px){
+  .mid-section--h2 {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+@media(min-width:1200px){
+  .mid-section--h2 {
+    font-size: 5rem;
+  }
+  .mid-section--img {
+    width: 100%;
+    height: 60rem; /* Mantén la proporción original de la imagen */
+}
+.mid-section--h2-div {
+  top: 30%;
+}
+}
+.pedido{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  padding: 0 0rem;
+}
+.pedido--h3{
+  display: flex;
+  font-family: var(--fuenteParrafo);
+  color: var(--Blanco);
+  justify-content: center;
+  padding-bottom: 6rem;
+}
+
+.bx.bxs-cart,
+.bx.bxs-shopping-bag,
+.bx.bx-badge-check,
+.bx.bxl-whatsapp,
+.bx.bx-dollar-circle{
+  display: flex;
+  color:var(--Blanco);
+  font-size: 6rem;
+  justify-content: center;
+}
+.pedido--p{
+  display: flex;
+  text-align: center;
+}
+@media(max-width:768px){
+    .pedido{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .img__flecha{
+      transform: rotate(90deg);
+      height: 5rem;
+      width: 10rem;
+    }
+    .pedido--flechas{
+      display: flex;
+      justify-content: center;
+      padding: 4rem;
+    }
+    .pedido--p{
+      display: flex;
+      justify-content: center;
+    }
+}
+.last{
+  display: flex;
+  justify-content: center;
+  
+}
+.derechos{
+  display: flex;
+}
+.footerh3{
+  font-size: 2.7rem;
+}
+.footer{
+  border-bottom: 0.5rem solid var(--Gris);
+}
+
+/* PAGINA EVO */
+.descripcion{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4rem;
+  align-items: center;
+}
+.img-evo{
+  width: auto;
+  max-width: 100%;
+  grid-template-columns: 2/3;
+
+}
+.desc--p {
+  grid-column: 1;
+  text-align:center;
+  font-size: 2.5rem;
+}
+.desc--h2{
+  grid-column: 1/span 2;
+  text-align: center;
+}
+.white{
+  background-color: var(--Blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.white__texto--color{
+  color: var(--Negro);
+  font-size: 2rem;
+  text-align: center;
+}
+.white__imagenes{
+  display: flex;
+  gap: 2rem;
+  flex-basis: calc(33.33% - 15px);
+}
+
+/* BENEFICIOS */
+.beneficios--h2__color{
+  color: var(--Amarillo);
+}
+.beneficios--lista{
+  color: var(--Blanco);
+}
+
+/* MANIPULACIÓN */
+.manipulacion--titulo__h2{
+  color: var(--Amarillo);
+}
+.manipulacion--p{
+  text-align: justify;
+}
+.manipulacion--p__3{
+  padding-top: 8rem;
+}
+.manipulacion--p__2{
+  padding-top: 2rem;
+}
+
+/* HELADERA */
+.heladera {
+  width: 100%;
+  position: relative;
+}
+
+.heladera--position {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.heladera--img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+.iconos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bx.bxs-time,
+.bx.bx-fridge,
+.bx.bxs-thermometer {
+  color: var(--Amarillo);
+  font-size: 6rem;
+}
+.heladera--h2{
+  padding: 2rem;
+}
+.iconos__p{
+  font-size: 2.5rem;
+}
+.iconos__h4{
+  font-size: 2rem;
+}
+
+/* LOCAL */
+/* HORARIOS */
+.primera-seccion{
+  display: flex;
+  justify-content: space-between;
+}
+.maps{
+  padding:8rem;
+}
+.bx.bxl-whatsapp{
+padding-right: 2rem;
+color: #25d366;
+}
+.telefono{
+  display: flex;
+}
+.horarios{
+  display: flex;
+  flex-direction: column;
+  
+}
+/* VIDEO */
+.video{
+  display: flex;
+  justify-content: center;
+  padding-left: 15rem;
+}
+.video--black-bull{
+  width: 1036px;
+  height: 583px;
+}
